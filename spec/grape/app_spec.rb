@@ -19,7 +19,7 @@ RSpec.describe Grape::App do
   end
 
   it 'should init with default time zone' do
-    expect(Time.zone.name).to eq("UTC")
+    expect(Time.zone_default).to eq(:utc)
   end
 
   it 'should configure i18n' do
