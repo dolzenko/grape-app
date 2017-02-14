@@ -5,10 +5,10 @@ require 'active_support/string_inquirer'
 require 'active_support/configurable'
 require 'active_support/inflector/methods'
 require 'active_support/core_ext/time/zones'
-require 'activesupport/json_encoder'
 require 'hashie-forbidden_attributes'
 require 'rack/cors'
 require 'rack/ssl-enforcer'
+require 'kaminari/activerecord'
 
 class Grape::App < Grape::API
   include ActiveSupport::Configurable

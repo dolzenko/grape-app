@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'grape'
   s.add_dependency 'grape-entity'
   s.add_dependency 'activesupport'
-  s.add_dependency 'activesupport-json_encoder'
   s.add_dependency 'hashie-forbidden_attributes'
   s.add_dependency 'rack-cors'
   s.add_dependency 'rack-ssl-enforcer'
@@ -29,4 +28,3 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
 end
-

@@ -17,5 +17,6 @@ if defined?(ActiveRecord)
   ActiveRecord::Base.default_timezone = :utc
   ActiveRecord::Base.establish_connection(Grape::App.env.to_sym)
 
-  Grape::App.middleware.use ActiveRecord::ConnectionAdapters::ConnectionManagement
+  ActiveRecord::QueryCache.install_executor_hooks
+  Grape::App.middleware.use ::ActionDispatch::Executor, Class.new(ActiveSupport::Executor)
 end
